@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+</head>
+<body>
+
+    <h1>Form Pendaftaran Mahasiswa Baru (PMB)</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <!-- 1. DATA IDENTITAS DIRI -->
+        <fieldset>
+            <legend>1. Data Identitas Diri Calon Mahasiswa</legend>
+
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" required>
+            <br><br>
+
+            <label for="nik">NIK:</label><br>
+            <input type="text" id="nik" name="nik"
+                   minlength="16" maxlength="16"
+                   pattern="[0-9]{16}" required>
+            <br><br>
+
+            <label for="tempat_lahir">Tempat Lahir:</label><br>
+            <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+            <br><br>
+
+            <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+            <br><br>
+
+            <label>Jenis Kelamin:</label><br>
+
+            <input type="radio" id="laki" name="jenis_kelamin"
+                   value="Laki-laki" required>
+            <label for="laki">Laki-laki</label>
+
+            <input type="radio" id="perempuan" name="jenis_kelamin"
+                   value="Perempuan" required>
+            <label for="perempuan">Perempuan</label>
+            <br><br>
+
+            <label for="agama">Agama:</label><br>
+            <select id="agama" name="agama" required>
+                <option value="">-- Pilih Agama --</option>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Katolik">Katolik</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
+            <br><br>
+
+            <label for="alamat">Alamat Domisili:</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="50"
+                      required></textarea>
+            <br><br>
+
+            <label for="telepon">Nomor Kontak:</label><br>
+            <input type="tel" id="telepon" name="telepon"
+                   pattern="[0-9]{10,15}" required>
+            <br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 2. DATA PENDIDIKAN -->
+        <fieldset>
+            <legend>2. Data Pendidikan Asal</legend>
+
+            <label for="sekolah">Nama Sekolah:</label><br>
+            <input type="text" id="sekolah" name="sekolah" required>
+            <br><br>
+
+            <label for="npsn">NPSN:</label><br>
+            <input type="text" id="npsn" name="npsn"
+                   pattern="[0-9]{8}" maxlength="8" required>
+            <br><br>
+
+            <label for="jurusan">Jurusan / Program:</label><br>
+            <select id="jurusan" name="jurusan" required>
+                <option value="">-- Pilih Jurusan --</option>
+                <option value="MIPA">MIPA</option>
+                <option value="IPS">IPS</option>
+                <option value="Bahasa">Bahasa</option>
+                <option value="Lainnya">Lainnya</option>
+            </select>
+            <br><br>
+
+            <label for="tahun_lulus">Tahun Lulus:</label><br>
+            <input type="number" id="tahun_lulus" name="tahun_lulus"
+                   min="2000" max="2100" required>
+            <br><br>
+
+            <label for="nilai_rapor">Rata-rata Nilai Rapor:</label><br>
+            <input type="number" id="nilai_rapor" name="nilai_rapor"
+                   min="0" max="100" step="0.01" required>
+            <br><br>
+
+            <label for="nilai_utbk">Skor UTBK:</label><br>
+            <input type="number" id="nilai_utbk" name="nilai_utbk"
+                   min="0" step="0.01" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 3. DATA ORANG TUA -->
+        <fieldset>
+            <legend>3. Data Orang Tua atau Wali</legend>
+
+            <label for="nama_ayah">Nama Ayah:</label><br>
+            <input type="text" id="nama_ayah" name="nama_ayah" required>
+            <br><br>
+
+            <label for="nama_ibu">Nama Ibu:</label><br>
+            <input type="text" id="nama_ibu" name="nama_ibu" required>
+            <br><br>
+
+            <label for="pekerjaan_ayah">Pekerjaan Ayah:</label><br>
+            <input type="text" id="pekerjaan_ayah"
+                   name="pekerjaan_ayah" required>
+            <br><br>
+
+            <label for="pekerjaan_ibu">Pekerjaan Ibu:</label><br>
+            <input type="text" id="pekerjaan_ibu"
+                   name="pekerjaan_ibu" required>
+            <br><br>
+
+            <label for="penghasilan">Penghasilan Orang Tua:</label><br>
+            <select id="penghasilan" name="penghasilan" required>
+                <option value="">-- Pilih Penghasilan --</option>
+                <option value="< 1 juta">Kurang dari Rp1.000.000</option>
+                <option value="1-5 juta">Rp1.000.000 - Rp5.000.000</option>
+                <option value="5-10 juta">Rp5.000.000 - Rp10.000.000</option>
+                <option value="> 10 juta">Lebih dari Rp10.000.000</option>
+            </select>
+            <br><br>
+
+            <label for="telepon_ortu">Nomor Telepon Orang Tua:</label><br>
+            <input type="tel" id="telepon_ortu" name="telepon_ortu"
+                   pattern="[0-9]{10,15}" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 4. PILIHAN PENDAFTARAN -->
+        <fieldset>
+            <legend>4. Pilihan Pendaftaran</legend>
+
+            <label for="jalur">Jalur Seleksi:</label><br>
+            <select id="jalur" name="jalur" required>
+                <option value="">-- Pilih Jalur Seleksi --</option>
+                <option value="Reguler Gelombang 1">
+                    Jalur Reguler Gelombang 1
+                </option>
+                <option value="Reguler Gelombang 2">
+                    Jalur Reguler Gelombang 2
+                </option>
+                <option value="Prestasi">Jalur Prestasi</option>
+            </select>
+            <br><br>
+
+            <label for="prodi1">Pilihan Program Studi 1:</label><br>
+            <select id="prodi1" name="prodi1" required>
+                <option value="">-- Pilih Program Studi --</option>
+                <option value="Teknik Informatika">
+                    S1 Teknik Informatika
+                </option>
+                <option value="Sistem Informasi">
+                    S1 Sistem Informasi
+                </option>
+            </select>
+            <br><br>
+
+            <label for="prodi2">Pilihan Program Studi 2:</label><br>
+            <select id="prodi2" name="prodi2" required>
+                <option value="">-- Pilih Program Studi --</option>
+                <option value="Teknik Informatika">
+                    S1 Teknik Informatika
+                </option>
+                <option value="Sistem Informasi">
+                    S1 Sistem Informasi
+                </option>
+            </select>
+            <br><br>
+
+            <label for="lokasi_ujian">Lokasi Ujian:</label><br>
+            <select id="lokasi_ujian" name="lokasi_ujian" required>
+                <option value="">-- Pilih Lokasi Ujian --</option>
+                <option value="Kampus Utama - Lab Komputer 2">
+                    Kampus Utama - Lab Komputer 2
+                </option>
+            </select>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 5. DOKUMEN -->
+        <fieldset>
+            <legend>5. Dokumen dan Berkas Unggahan</legend>
+
+            <label for="pasfoto">Pasfoto Resmi:</label><br>
+            <input type="file" id="pasfoto" name="pasfoto"
+                   accept=".jpg,.jpeg,.png" required>
+            <br><br>
+
+            <label for="identitas">Scan Kartu Identitas:</label><br>
+            <input type="file" id="identitas" name="identitas"
+                   accept=".pdf" required>
+            <br><br>
+
+            <label for="kk">Scan Kartu Keluarga:</label><br>
+            <input type="file" id="kk" name="kk"
+                   accept=".pdf" required>
+            <br><br>
+
+            <label for="rapor">Scan Rapor / Ijazah:</label><br>
+            <input type="file" id="rapor" name="rapor"
+                   accept=".pdf" required>
+            <br><br>
+
+            <label for="sertifikat">Sertifikat Pendukung:</label><br>
+            <input type="file" id="sertifikat" name="sertifikat"
+                   accept=".pdf" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- 6. PEMBAYARAN -->
+        <fieldset>
+            <legend>6. Data Transaksi Pembayaran</legend>
+
+            <label for="metode">Metode Pembayaran:</label><br>
+            <select id="metode" name="metode" required>
+                <option value="">-- Pilih Metode Pembayaran --</option>
+                <option value="VA Mandiri">
+                    Virtual Account Bank Mandiri
+                </option>
+                <option value="VA BNI">
+                    Virtual Account Bank BNI
+                </option>
+                <option value="VA BRI">
+                    Virtual Account Bank BRI
+                </option>
+            </select>
+            <br><br>
+
+            <label for="va">Kode Pembayaran / Virtual Account:</label><br>
+            <input type="text" id="va" name="va"
+                   pattern="[0-9]+" required>
+            <br><br>
+
+            <label for="nominal">Nominal Biaya Pendaftaran:</label><br>
+            <input type="number" id="nominal" name="nominal"
+                   min="0" required>
+            <br><br>
+
+            <label for="bukti">Bukti Transaksi:</label><br>
+            <input type="file" id="bukti" name="bukti"
+                   accept=".jpg,.jpeg,.png" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- TOMBOL SUBMIT -->
+        <button type="submit">Daftar Sekarang</button>
+
+    </form>
+
+</body>
+</html>
